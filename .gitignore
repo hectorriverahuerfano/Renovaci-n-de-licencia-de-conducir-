@@ -1,8 +1,7 @@
 # Secretos y credenciales locales
 .env
 .env.*
-PRDS/GIT.MD
-PRDS/azure_boards..md
-PRDS/stick.md
-PRDS/render.md
-.agents/mcp_config.json
+
+# Carpetas de documentacion interna y ecosistema de agentes
+PRDS/
+.agents/
