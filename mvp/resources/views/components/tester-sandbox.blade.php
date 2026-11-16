@@ -49,6 +49,14 @@
                 <span class="font-semibold">4. Bloqueo Normativo</span>
                 <span class="text-slate-400 text-[10px] hidden md:inline">(RES-TMP)</span>
             </a>
+
+            <!-- Enlace al Entregable Oficial PO -->
+            <a href="/entregable-po.html"
+               target="_blank"
+               class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all shadow-sm"
+               title="Ver el documento completo de la prueba práctica con las 5 secciones respondidas">
+                <span>📋 Entregable PO (10 Págs)</span>
+            </a>
         </div>
     </div>
 </div>

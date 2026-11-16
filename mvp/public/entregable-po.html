@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50 text-slate-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable Oficial: Prueba Práctica Product Owner — Renovación de Licencia de Conducir GOES</title>
+    
+    <!-- Tipografías Institucionales GOES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy-primary: #0F2C59;
+            --blue-civic: #1D4ED8;
+            --blue-light: #EFF6FF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border-subtle: #E2E8F0;
+            --success-color: #15803D;
+            --warning-color: #B45309;
+            --danger-color: #B91C1C;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            background-color: #F8FAFC;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--navy-primary);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        .header-doc {
+            background: linear-gradient(135deg, #0F2C59 0%, #1E3A8A 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            box-shadow: 0 10px 25px -5px rgba(15, 44, 89, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-doc h1 {
+            color: #FFFFFF;
+            font-size: 28px;
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .header-doc .subtitle {
+            font-size: 16px;
+            color: #93C5FD;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: #BFDBFE;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card-section {
+            background: #FFFFFF;
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            page-break-inside: avoid;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--blue-light);
+            color: var(--blue-civic);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card-section h2 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #F1F5F9;
+            padding-bottom: 12px;
+        }
+
+        .card-section h3 {
+            font-size: 17px;
+            margin: 20px 0 10px 0;
+            color: #1E293B;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: #0F172A;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        table th, table td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        table th {
+            background-color: #F8FAFC;
+            color: var(--navy-primary);
+            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        table tr:hover {
+            background-color: #F8FAFC;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-success { background: #DCFCE7; color: #166534; }
+        .badge-warning { background: #FEF3C7; color: #92400E; }
+        .badge-danger { background: #FEE2E2; color: #991B1B; }
+        .badge-info { background: #E0E7FF; color: #3730A3; }
+
+        .callout {
+            border-left: 4px solid var(--blue-civic);
+            background: #F8FAFC;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+            font-size: 13.5px;
+        }
+
+        .callout-warning {
+            border-left-color: #F59E0B;
+            background: #FFFBEB;
+        }
+
+        .callout-success {
+            border-left-color: #10B981;
+            background: #F0FDF4;
+        }
+
+        .gherkin-box {
+            background: #0F172A;
+            color: #F8FAFC;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+
+        .gherkin-keyword { color: #F472B6; font-weight: bold; }
+        .gherkin-text { color: #E2E8F0; }
+        .gherkin-comment { color: #94A3B8; font-style: italic; }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .kpi-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            padding: 16px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .kpi-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy-primary);
+        }
+
+        .kpi-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .btn-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blue-civic);
+            color: #FFFFFF !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(29, 78, 216, 0.25);
+            transition: all 0.2s;
+        }
+
+        .btn-live:hover {
+            background: #1E40AF;
+        }
+
+        /* Estilos de Impresión / Exportación a PDF de 10 páginas */
+        @media print {
+            body {
+                background: #FFFFFF;
+                color: #000000;
+                font-size: 11pt;
+            }
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            .header-doc {
+                background: #0F2C59 !important;
+                color: #FFFFFF !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                border-radius: 0;
+                padding: 24px;
+                margin-bottom: 20px;
+            }
+            .card-section {
+                border: 1px solid #CBD5E1;
+                box-shadow: none;
+                margin-bottom: 20px;
+                padding: 20px;
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Encabezado Oficial -->
+    <header class="header-doc">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+            <span style="background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em;">
+                DIOS UNIÓN LIBERTAD • GOBIERNO DE EL SALVADOR
+            </span>
+            <span style="font-size: 12px; color: #93C5FD;">Versión Oficial 1.0 (Noviembre 2026)</span>
+        </div>
+        <h1>Prueba Práctica Product Owner — Gobierno de El Salvador</h1>
+        <div class="subtitle">Caso de Uso: Renovación de Licencia de Conducir (VMT / SERTRACEN)</div>
+        
+        <div class="meta-grid">
+            <div class="meta-item">
+                <strong>Rol y Responsable</strong>
+                Simon — Lead Product Owner
+            </div>
+            <div class="meta-item">
+                <strong>Equipo Squad Técnico</strong>
+                Kira (Arq), Charlotte (UX/UI), Luna (Dev), Max & Coco (Sec/QA), Oreo (Ops)
+            </div>
+            <div class="meta-item">
+                <strong>Prototipo Funcional en Vivo</strong>
+                <a href="https://renovaci-n-de-licencia-de-conducir.onrender.com" target="_blank" style="color: #67E8F9; text-decoration: underline; font-weight: bold;">
+                    Ver Despliegue en Render ↗
+                </a>
+            </div>
+            <div class="meta-item">
+                <strong>Estado del tableros</strong>
+                Azure Boards (18 User Stories + 3 Bugs Cerrados)
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de acciones rápidas (no imprimible) -->
+    <div class="no-print" style="margin-bottom: 24px; display: flex; gap: 12px; align-items: center; justify-content: flex-end;">
+        <button onclick="window.print()" style="background: #FFFFFF; border: 1px solid #CBD5E1; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            🖨️ Imprimir / Guardar en PDF (10 Páginas)
+        </button>
+        <a href="https://renovaci-n-de-licencia-de-conducir.onrender.com" target="_blank" class="btn-live">
+            🚀 Probar MVP en Línea
+        </a>
+    </div>
+
+    <!-- SECCIÓN A: DESCUBRIMIENTO Y SIMPLIFICACIÓN -->
+    <section class="card-section">
+        <span class="section-badge">Sección A</span>
+        <h2>Descubrimiento y Simplificación del Trámite</h2>
+
+        <h3>1. Problem Statement (Definición del Problema)</h3>
+        <div class="callout">
+            "El proceso actual de renovación de licencias de conducir en El Salvador impone una <strong>fricción operativa y presencial crítica de 6 horas de duración</strong> sobre 240,000 ciudadanos al año, provocando una tasa de abandono del <strong>22%</strong> y una baja satisfacción ciudadana (<strong>48/100</strong>), derivado de un modelo 100% presencial y secuencial donde el ciudadano descubre sus impedimentos legales (esquelas pendientes o licencias suspendidas) tras largas filas en ventanilla, duplicando visitas innecesarias a un costo operativo estatal de <strong>US$18</strong> por solicitud."
+        </div>
+
+        <h3>2. Diferenciación: Síntomas vs. Causas Raíz</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 50%;">Síntoma Visible (Efecto en el Ciudadano)</th>
+                    <th style="width: 50%;">Causa Raíz Operativa o Sistémica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Filas de espera de 6 horas en sucursales SERTRACEN (900 visitas diarias promedio).</td>
+                    <td><strong>Dependencia secuencial en ventanilla:</strong> el pago, revisión documental, chequeo de multas y examen se hacen en sitio sin validación previa.</td>
+                </tr>
+                <tr>
+                    <td>22% de abandono del trámite sin finalizar.</td>
+                    <td><strong>Descubrimiento tardío de impedimentos:</strong> ciudadanos descubren esquelas impagas o vencimiento tardío estando en caja, obligándolos a retirarse sin pagar.</td>
+                </tr>
+                <tr>
+                    <td>Satisfacción ciudadana de 48/100 y quejas constantes de servicio.</td>
+                    <td><strong>Incertidumbre e información opaca:</strong> aranceles no desglosados con claridad y requisitos no verificables antes de acudir físicamente.</td>
+                </tr>
+                <tr>
+                    <td>Costo operativo elevado de US$ 18 por trámite iniciado.</td>
+                    <td><strong>Uso intensivo de personal público</strong> para tareas manuales de captura de datos, cobro en caja y cotejo visual que pueden ser autoservicio digital.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3. Identificación de 3 Arquetipos de Usuario</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 16px 0;">
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 18px; border-radius: 10px;">
+                <h4 style="color: var(--blue-civic); margin-bottom: 6px;">1. Carlos, 38 años — Empleado en San Salvador</h4>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Perfil:</strong> Trabaja en horario de oficina estricto. Cuenta con smartphone y tarjeta bancaria.</p>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Qué le complica:</strong> Perder un día completo de trabajo (6 horas) haciendo filas solo para validar y pagar aranceles.</p>
+                <p style="font-size: 13px; color: var(--success-color);"><strong>Qué necesita:</strong> Trámite previo en línea de 5 minutos, pago digital y cita agendada de 15 minutos en Fila Express.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 18px; border-radius: 10px;">
+                <h4 style="color: var(--warning-color); margin-bottom: 6px;">2. Doña Rosa, 59 años — Conductora en Sonsonate</h4>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Perfil:</strong> Baja familiaridad con trámites web complejos, teléfono prepago con datos limitados.</p>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Qué le complica:</strong> Miedo a cometer errores en pagos web, interfaces con letra diminuta o bloqueos sin explicación.</p>
+                <p style="font-size: 13px; color: var(--success-color);"><strong>Qué necesita:</strong> Interfaz accesible (WCAG 2.2 AA), opción de pago con NPE en ventanilla bancaria y botón persistente de <em>Atención Asistida</em>.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 18px; border-radius: 10px;">
+                <h4 style="color: #6366F1; margin-bottom: 6px;">3. Mateo, 29 años — Conductor Extranjero Residente</h4>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Perfil:</strong> Ciudadano extranjero con carnet de residente temporal y vehículo particular.</p>
+                <p style="font-size: 13px; margin-bottom: 6px;"><strong>Qué le complica:</strong> Normativas confusas sobre los meses de vigencia mínima de su carnet migratorio (más de 3 meses).</p>
+                <p style="font-size: 13px; color: var(--success-color);"><strong>Qué necesita:</strong> Validación preventiva de elegibilidad normativa antes de pagar o agendar, evitando rebotes en ventanilla.</p>
+            </div>
+        </div>
+
+        <h3>4. Plan de Discovery de 2 Semanas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Semana</th>
+                    <th>Fase y Actividades Clave</th>
+                    <th>Entregable / Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Semana 1</strong></td>
+                    <td>
+                        • 15 entrevistas contextuales en sedes SERTRACEN (San Salvador, Santa Ana, San Miguel).<br>
+                        • Mapeo de tiempos en cola: medición con cronómetro de cada subetapa (caja, validación, optometría).<br>
+                        • Análisis de causas de rechazo en ventanilla con funcionarios del VMT.
+                    </td>
+                    <td>Journey Map actual con puntos de dolor medidos y matriz de motivos de rechazo documental.</td>
+                </tr>
+                <tr>
+                    <td><strong>Semana 2</strong></td>
+                    <td>
+                        • Talleres de co-diseño con SERTRACEN para redefinir el flujo Fila Express.<br>
+                        • Pruebas de concepto con prototipo en papel/HTML de 5 pantallas con 12 usuarios reales.<br>
+                        • Levantamiento de viabilidad técnica de APIs (RNPN para DUI, VMT para multas, pasarelas de pago).
+                    </td>
+                    <td>Flujo futuro simplificado validado, contratos de API mínimos y definición del alcance del MVP de 4 meses.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>5. Simplificaciones Previas a la Digitalización</h3>
+        <p>Digitalizar un proceso burocrático ineficiente solo produce "burocracia digital acelerada". Por ello, el PO estableció simplificaciones normativas y operativas:</p>
+        <ul style="margin-left: 20px; color: var(--text-muted); font-size: 13.5px; line-height: 1.8;">
+            <li><strong>Unificación de Aranceles:</strong> Consolidar en un solo cobro transparente el derecho de licencia (<strong>US$ 52.82</strong>) y el examen visual (<strong>US$ 3.39</strong>) = <strong>US$ 56.21</strong>, eliminando dobles transacciones en caja.</li>
+            <li><strong>Verificación Previa Asíncrona de Multas:</strong> Consultar la base del VMT desde el inicio del trámite. Si hay esquelas, permitir pagarlas en la misma pasarela digital en lugar de enviar al ciudadano a una agencia bancaria física.</li>
+            <li><strong>Fila Express por Turno Confirmado:</strong> Quien completa su trámite y pago en línea no hace fila de revisión en ventanilla; ingresa directo a cabina optométrica y captura biométrica (menos de 15 minutos).</li>
+        </ul>
+
+        <h3>6. Hipótesis Priorizadas y Validación</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Prioridad</th>
+                    <th>Hipótesis de Negocio</th>
+                    <th>Experimento de Validación</th>
+                    <th>Criterio de Éxito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="badge badge-danger">Alta (H1)</span></td>
+                    <td>Si permitimos solventar esquelas pendientes en línea durante el trámite, el abandono por bloqueo legal se reducirá en un 40%.</td>
+                    <td>A/B Test en Paso 2 mostrando tarjeta de recuperación `<x-alert-recovery>` con botón "Pagar Esquela Ahora".</td>
+                    <td>Al menos el 45% de infractores saldan su multa en el mismo flujo digital.</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-warning">Media (H2)</span></td>
+                    <td>Garantizar una cita con atención en < 15 min mediante comprobante QR motivará al menos al 50% de los ciudadanos a iniciar por internet.</td>
+                    <td>Lanzamiento de campaña oficial y medición de tasa de inicio digital en el portal.</td>
+                    <td>Adopción digital inicial ≥ 55% en los primeros 3 meses de operación.</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-info">Media (H3)</span></td>
+                    <td>Ofrecer mandamiento NPE para pagar en ventanilla bancaria evitará excluir al 30% de la población no bancarizada.</td>
+                    <td>Monitoreo del ratio de selección pasarela online (tarjeta/Chivo) vs. mandamiento NPE 30 dígitos.</td>
+                    <td>Entre 25% y 35% de solicitudes eligen NPE sin abandonar el trámite.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- SECCIÓN B: ESTRATEGIA Y MVP -->
+    <section class="card-section">
+        <span class="section-badge">Sección B</span>
+        <h2>Estrategia de Producto y Definición del MVP (4 Meses)</h2>
+
+        <h3>1. Visión y Propuesta de Valor</h3>
+        <p>
+            <strong>Visión:</strong> Convertir la renovación de licencias de conducir en El Salvador en un trámite híbrido ejemplar en Latinoamérica, donde el 100% de la gestión administrativa, validación legal y recaudo ocurra en canales digitales amigables, restringiendo la visita presencial únicamente a la toma biométrica y optométrica de ley con tiempos de permanencia menores a 15 minutos.
+        </p>
+        <p>
+            <strong>Propuesta de Valor Ciudadana:</strong> "Tu licencia renovada sin filas de 6 horas, con certeza de costo, verificación instantánea de multas y turno prioritario garantizado."
+        </p>
+
+        <h3>2. Flujo Futuro: Qué es 100% Digital vs. Qué Sigue Siendo Presencial</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+            <div style="background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 12px;">
+                <h4 style="color: #166534; margin-bottom: 8px;">📱 100% Digital (En Línea — 5 minutos)</h4>
+                <ul style="font-size: 13px; line-height: 1.7; color: #14532D; margin-left: 18px;">
+                    <li>Selección de clase de licencia (7 categorías oficiales).</li>
+                    <li>Validación de DUI salvadoreño o Carnet de Residente temporal/definitivo.</li>
+                    <li>Consulta en vivo de solvencia VMT e historial de esquelas.</li>
+                    <li>Pago en línea con tarjeta o emisión de mandamiento NPE para efectivo.</li>
+                    <li>Cálculo exacto de recargo por mora extemporánea ($5.71 si ya venció).</li>
+                    <li>Agendamiento de turno de fecha, hora y sede SERTRACEN.</li>
+                    <li>Emisión de pase oficial QR y seguimiento del trámite con código de 8 dígitos.</li>
+                </ul>
+            </div>
+            <div style="background: #EFF6FF; border: 1px solid #BFDBFE; padding: 20px; border-radius: 12px;">
+                <h4 style="color: #1E40AF; margin-bottom: 8px;">🏢 Presencial Obligatorio (Sucursal SERTRACEN — < 15 min)</h4>
+                <ul style="font-size: 13px; line-height: 1.7; color: #1E3A8A; margin-left: 18px;">
+                    <li>Examen optométrico de agudeza visual en consultorio certificado (<strong>Mandato legal inmutable</strong> según Ley de Transporte).</li>
+                    <li>Captura fotográfica biométrica actualizada en cabina.</li>
+                    <li>Cotejo físico de originales (DUI vigente y carné de licencia anterior).</li>
+                    <li>Impresión termoplástica inmediata y entrega física de la credencial.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>3. Alcance del MVP: Qué entra y qué queda fuera (y por qué)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Área</th>
+                    <th style="width: 40%;">DENTRO del MVP (Meses 1 a 4)</th>
+                    <th style="width: 40%;">FUERA del MVP (Fase 2 / Post-MVP)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Identificación</strong></td>
+                    <td>Formulario ágil de DUI con validación de máscara y algoritmo Módulo 10. Residencia y diplomáticos.</td>
+                    <td>Autenticación biométrica facial por app móvil o integración federada con Firma Electrónica avanzada.</td>
+                </tr>
+                <tr>
+                    <td><strong>Multas VMT</strong></td>
+                    <td>Consulta determinística de esquelas y pago recuperable en línea dentro del mismo flujo.</td>
+                    <td>Sistema de apelación jurídica de esquelas o planes de pago en cuotas fiscales.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pagos</strong></td>
+                    <td>Pasarela digital con tarjeta de crédito/débito y generación de mandamiento NPE de 30 dígitos para efectivo.</td>
+                    <td>Integración con criptomonedas o dispersión automática a múltiples cuentas municipales.</td>
+                </tr>
+                <tr>
+                    <td><strong>Citas</strong></td>
+                    <td>Reserva de turno en 5 sucursales SERTRACEN con aforo y reprogramación autónoma.</td>
+                    <td>Reasignación dinámica inteligente por geolocalización en tiempo real.</td>
+                </tr>
+                <tr>
+                    <td><strong>Backoffice</strong></td>
+                    <td>Módulo de escaneo de QR y validación de expedientes para el personal de sucursal.</td>
+                    <td>Panel completo de BI para funcionarios con reportes avanzados (31 SP - RICE desfavorable).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Dependencias Legales, Operativas e Institucionales</h3>
+        <ul style="margin-left: 20px; color: var(--text-muted); font-size: 13.5px; line-height: 1.8;">
+            <li><strong>Legal (Ley de Transporte Terrestre, Tránsito y Seguridad Vial):</strong> Art. 21 y 65 obligan al examen visual presencial. Ningún desarrollo técnico puede omitir la presencia física para esta prueba sin reforma legislativa.</li>
+            <li><strong>Institucional (VMT vs. SERTRACEN vs. PNC):</strong> Dependencia de disponibilidad de las bases de datos de esquelas. El MVP implementa un patrón Circuit Breaker y fallback manual para que caídas de red no detengan al ciudadano.</li>
+            <li><strong>Operativa (SERTRACEN):</strong> Reasignación de ventanillas físicas para habilitar la <em>"Fila Express Digital"</em>; sin este acuerdo operativo en tierra, la promesa de menos de 15 minutos no se cumpliría.</li>
+        </ul>
+
+        <h3>5. Principales Riesgos y Plan de Mitigación</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Riesgo Identificado</th>
+                    <th>Nivel</th>
+                    <th>Estrategia de Mitigación en el MVP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Caída o intermitencia de API de consultas del VMT.</td>
+                    <td><span class="badge badge-danger">Alto</span></td>
+                    <td>Componente `<x-alert-recovery>` con opción "Reintentar" y botón de derivación a "Atención Asistida" sin perder los datos ya llenados.</td>
+                </tr>
+                <tr>
+                    <td>Brecha digital en personas mayores o zonas rurales.</td>
+                    <td><span class="badge badge-warning">Medio</span></td>
+                    <td>Canal telefónico asistido 2200-GOES con ticket trazable y soporte para mandamiento NPE en agencias de correo/bancos.</td>
+                </tr>
+                <tr>
+                    <td>Saturación de turnos presenciales en San Salvador.</td>
+                    <td><span class="badge badge-warning">Medio</span></td>
+                    <td>Aforo dinámico por slots de 15 minutos y visualización del porcentaje de ocupación por sucursal en el agendador.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- SECCIÓN C: PRIORIZACIÓN Y DELIVERY -->
+    <section class="card-section">
+        <span class="section-badge">Sección C</span>
+        <h2>Priorización y Delivery (RICE, Roadmap y User Stories)</h2>
+
+        <h3>1. Matriz de Priorización RICE de las 9 Iniciativas</h3>
+        <p style="font-size: 13px;">
+            Fórmula: <strong>RICE Score = (Reach × Impact × Confidence) / Effort</strong>.<br>
+            <em>Reach:</em> Ciudadanos anuales impactados (miles). <em>Impact:</em> 3 = Masivo, 2 = Alto, 1 = Medio, 0.5 = Bajo. <em>Confidence:</em> 100% = Alta certeza, 80% = Media. <em>Effort:</em> Suma total de Story Points (Diseño + Backend + Frontend).
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Iniciativa</th>
+                    <th>Est. Dis</th>
+                    <th>Est. Back</th>
+                    <th>Est. Front</th>
+                    <th>Total SP</th>
+                    <th>Reach</th>
+                    <th>Impact</th>
+                    <th>Conf.</th>
+                    <th>RICE Score</th>
+                    <th>Prioridad MVP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>Formulario de Solicitud</strong></td>
+                    <td>3</td><td>3</td><td>5</td><td><strong>11</strong></td>
+                    <td>240k</td><td>3.0</td><td>100%</td><td><strong>65.4</strong></td>
+                    <td><span class="badge badge-success">Release 1 (Mes 1)</span></td>
+                </tr>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>Consulta de Multas</strong></td>
+                    <td>3</td><td>3</td><td>3</td><td><strong>9</strong></td>
+                    <td>240k</td><td>3.0</td><td>80%</td><td><strong>64.0</strong></td>
+                    <td><span class="badge badge-success">Release 1 (Mes 2)</span></td>
+                </tr>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>Citas (Examen Visual)</strong></td>
+                    <td>3</td><td>5</td><td>5</td><td><strong>13</strong></td>
+                    <td>240k</td><td>3.0</td><td>90%</td><td><strong>49.8</strong></td>
+                    <td><span class="badge badge-success">Release 1 (Mes 2)</span></td>
+                </tr>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>Pago Digital</strong></td>
+                    <td>2</td><td>8</td><td>5</td><td><strong>15</strong></td>
+                    <td>240k</td><td>3.0</td><td>90%</td><td><strong>43.2</strong></td>
+                    <td><span class="badge badge-success">Release 1 (Mes 3)</span></td>
+                </tr>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>Seguimiento del Trámite</strong></td>
+                    <td>2</td><td>2</td><td>5</td><td><strong>9</strong></td>
+                    <td>180k</td><td>2.0</td><td>90%</td><td><strong>36.0</strong></td>
+                    <td><span class="badge badge-success">Release 1 (Mes 3)</span></td>
+                </tr>
+                <tr style="background: #EFF6FF;">
+                    <td><strong>Autenticación</strong></td>
+                    <td>2</td><td>5</td><td>3</td><td><strong>10</strong></td>
+                    <td>120k</td><td>1.5</td><td>80%</td><td><strong>14.4</strong></td>
+                    <td><span class="badge badge-info">Release 1.5 (Mes 4)</span></td>
+                </tr>
+                <tr style="background: #EFF6FF;">
+                    <td><strong>Notificaciones</strong></td>
+                    <td>1</td><td>3</td><td>3</td><td><strong>7</strong></td>
+                    <td>150k</td><td>1.0</td><td>80%</td><td><strong>17.1</strong></td>
+                    <td><span class="badge badge-info">Release 1.5 (Mes 4)</span></td>
+                </tr>
+                <tr style="background: #FFFBEB;">
+                    <td><strong>Validación Automática Docs</strong></td>
+                    <td>5</td><td>13</td><td>5</td><td><strong>23</strong></td>
+                    <td>100k</td><td>2.0</td><td>50%</td><td><strong>4.3</strong></td>
+                    <td><span class="badge badge-warning">Fase 2 (Post-MVP)</span></td>
+                </tr>
+                <tr style="background: #FFFBEB;">
+                    <td><strong>Panel para Funcionarios</strong></td>
+                    <td>5</td><td>13</td><td>13</td><td><strong>31</strong></td>
+                    <td>2k</td><td>1.5</td><td>80%</td><td><strong>0.07</strong></td>
+                    <td><span class="badge badge-warning">Fase 2 (Post-MVP)</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Plan de Releases y Roadmap Tentativo (4 Meses)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0;">
+            <div style="background: #F8FAFC; border-top: 4px solid var(--navy-primary); padding: 16px; border-radius: 8px;">
+                <h4 style="font-size: 14px; margin-bottom: 6px;">Mes 1: Core Cívico y Elegibilidad</h4>
+                <p style="font-size: 12px;">• Arquitectura Laravel 11 + SQLite.<br>• Selector de 7 clases de licencia.<br>• Formulario DUI y comprobación de vigencia.</p>
+            </div>
+            <div style="background: #F8FAFC; border-top: 4px solid var(--blue-civic); padding: 16px; border-radius: 8px;">
+                <h4 style="font-size: 14px; margin-bottom: 6px;">Mes 2: Solvencia y Agendamiento</h4>
+                <p style="font-size: 12px;">• Consulta de esquelas VMT en vivo.<br>• Módulo de recuperación de multas.<br>• Motor de citas para 5 sedes SERTRACEN.</p>
+            </div>
+            <div style="background: #F8FAFC; border-top: 4px solid #10B981; padding: 16px; border-radius: 8px;">
+                <h4 style="font-size: 14px; margin-bottom: 6px;">Mes 3: Pasarela de Pagos y Comprobante</h4>
+                <p style="font-size: 12px;">• Pago tarjeta + Mandamiento NPE.<br>• Cálculo de mora extemporánea ($5.71).<br>• Comprobante oficial con código QR.</p>
+            </div>
+            <div style="background: #F8FAFC; border-top: 4px solid #F59E0B; padding: 16px; border-radius: 8px;">
+                <h4 style="font-size: 14px; margin-bottom: 6px;">Mes 4: Hardening, QA y Piloto</h4>
+                <p style="font-size: 12px;">• Pruebas E2E de caja negra Playwright.<br>• Auditoría de accesibilidad WCAG 2.2 AA.<br>• Despliegue en Render y piloto en San Salvador.</p>
+            </div>
+        </div>
+
+        <h3>3. Dos Historias de Usuario Detalladas con Criterios de Aceptación (Gherkin)</h3>
+
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+            <h4 style="color: var(--navy-primary); margin-bottom: 6px;">Historia 1: US-06 — Resolución y Recuperación ante Esquelas Pendientes</h4>
+            <p style="font-size: 13px; margin-bottom: 12px;">
+                <strong>Como</strong> ciudadano que renueva su licencia de conducir y posee una esquela pendiente de tránsito,<br>
+                <strong>Quiero</strong> conocer el detalle exacto de la infracción y poder liquidarla digitalmente en el mismo flujo,<br>
+                <strong>Para</strong> obtener mi solvencia de inmediato y continuar con mi cita de renovación sin abandonar el trámite.
+            </p>
+            
+            <div class="gherkin-box">
+<span class="gherkin-keyword">Feature:</span> <span class="gherkin-text">Recuperación ante bloqueo por esquela pendiente en VMT</span>
+
+  <span class="gherkin-keyword">Scenario:</span> <span class="gherkin-text">Ciudadano con esquela pendiente salda su deuda en línea</span>
+    <span class="gherkin-keyword">Given</span> <span class="gherkin-text">que el ciudadano ingresa su DUI "05123456-7" en el Paso 2</span>
+    <span class="gherkin-keyword">When</span> <span class="gherkin-text">el sistema consulta al servicio del VMT y detecta una esquela pendiente de US$ 34.29</span>
+    <span class="gherkin-keyword">Then</span> <span class="gherkin-text">el sistema muestra el componente accesible "&lt;x-alert-recovery&gt;" con nivel "danger"</span>
+    <span class="gherkin-keyword">And</span> <span class="gherkin-text">presenta el botón "Pagar Esquela en Línea Ahora (US$ 34.29)" y el botón "Ya pagué — Revalidar"</span>
+    <span class="gherkin-keyword">When</span> <span class="gherkin-text">el ciudadano pulsa "Pagar Esquela en Línea Ahora" y completa la transacción simulada</span>
+    <span class="gherkin-keyword">Then</span> <span class="gherkin-text">la base de datos actualiza el estado de la esquela a "PAGADA"</span>
+    <span class="gherkin-keyword">And</span> <span class="gherkin-text">el sistema desbloquea automáticamente el flujo, mostrando mensaje de éxito y avanzando al Paso 3</span>
+
+  <span class="gherkin-keyword">Scenario:</span> <span class="gherkin-text">Caída de servicio VMT y canalización a Atención Asistida</span>
+    <span class="gherkin-keyword">Given</span> <span class="gherkin-text">que el servicio de consulta del VMT no responde (código HTTP 503)</span>
+    <span class="gherkin-keyword">When</span> <span class="gherkin-text">el ciudadano intenta verificar su solvencia</span>
+    <span class="gherkin-keyword">Then</span> <span class="gherkin-text">el sistema no expone errores técnicos en pantalla y muestra alerta amigable de reintento</span>
+    <span class="gherkin-keyword">And</span> <span class="gherkin-text">habilita la opción "Solicitar Atención Asistida / Orientación Oficial" abriendo el modal accesible</span>
+            </div>
+        </div>
+
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px;">
+            <h4 style="color: var(--navy-primary); margin-bottom: 6px;">Historia 2: US-07 — Desglose Transparente y Pago Unificado de Aranceles</h4>
+            <p style="font-size: 13px; margin-bottom: 12px;">
+                <strong>Como</strong> ciudadano que ha verificado su solvencia ante el VMT,<br>
+                <strong>Quiero</strong> ver el desglose inmutable de los costos fijados por ley y seleccionar entre pago online o efectivo con NPE,<br>
+                <strong>Para</strong> tener certeza jurídica del monto exacto sin cobros ocultos ni sorpresas en sucursal.
+            </p>
+            
+            <div class="gherkin-box">
+<span class="gherkin-keyword">Feature:</span> <span class="gherkin-text">Liquidación de aranceles oficiales de renovación</span>
+
+  <span class="gherkin-keyword">Scenario:</span> <span class="gherkin-text">Cálculo de arancel ordinario sin mora para licencia en mes de vencimiento</span>
+    <span class="gherkin-keyword">Given</span> <span class="gherkin-text">que la licencia del ciudadano vence en el mes en curso</span>
+    <span class="gherkin-keyword">When</span> <span class="gherkin-text">el ciudadano accede a la pantalla de pago (Paso 3)</span>
+    <span class="gherkin-keyword">Then</span> <span class="gherkin-text">el sistema desglosa: "Trámite de Licencia: US$ 52.82" y "Examen Visual: US$ 3.39"</span>
+    <span class="gherkin-keyword">And</span> <span class="gherkin-text">el total inmutable calculado es exactamente "US$ 56.21" con mora en "US$ 0.00"</span>
+
+  <span class="gherkin-keyword">Scenario:</span> <span class="gherkin-text">Cálculo de recargo por extemporaneidad para licencia vencida</span>
+    <span class="gherkin-keyword">Given</span> <span class="gherkin-text">que la fecha de vencimiento de la licencia es anterior al mes actual</span>
+    <span class="gherkin-keyword">When</span> <span class="gherkin-text">se calcula el arancel en el servicio de pagos</span>
+    <span class="gherkin-keyword">Then</span> <span class="gherkin-text">se añade el rubro "Multa por Renovación Tardía (Art. 21 Ley de Tránsito): US$ 5.71"</span>
+    <span class="gherkin-keyword">And</span> <span class="gherkin-text">el total a liquidar se totaliza en "US$ 61.92" con aviso legal explicativo</span>
+            </div>
+        </div>
+
+        <h3>4. Medición del Avance y Calidad (Más Allá de Ceremonias Scrum)</h3>
+        <p>Para evitar la trampa de medir solo "velocidad de story points" o asistencia a dailies, el PO definió métricas objetivas de entrega de ingeniería y valor:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimensión</th>
+                    <th>Métrica de Ingeniería / Producto</th>
+                    <th>Meta Operativa</th>
+                    <th>Herramienta de Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Velocidad de Flujo</strong></td>
+                    <td><strong>Lead Time for Changes:</strong> tiempo desde el commit hasta el contenedor corriendo en producción.</td>
+                    <td>< 45 minutos</td>
+                    <td>Pipeline Render CI/CD + GitHub Actions.</td>
+                </tr>
+                <tr>
+                    <td><strong>Estabilidad Técnica</strong></td>
+                    <td><strong>Change Failure Rate:</strong> porcentaje de despliegues que introducen bugs o degradación de servicio.</td>
+                    <td>< 5% de releases</td>
+                    <td>Registro de Bugs en Azure DevOps.</td>
+                </tr>
+                <tr>
+                    <td><strong>Calidad de Código</strong></td>
+                    <td><strong>Cobertura de Pruebas Automatizadas:</strong> assertions unitarios y de integración de reglas críticas.</td>
+                    <td>100% en elegibilidad y cálculo tarifario (20 tests en suite).</td>
+                    <td>PHPUnit / Pest en pipeline previo al merge.</td>
+                </tr>
+                <tr>
+                    <td><strong>Accesibilidad y UX</strong></td>
+                    <td><strong>Cumplimiento WCAG 2.2 Nivel AA:</strong> cero alertas nativas (`alert/confirm`) y contraste contrastado.</td>
+                    <td>100% de cumplimiento</td>
+                    <td>Playwright E2E + Auditoría de Accesibilidad.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- SECCIÓN D: MÉTRICAS Y DECISIONES -->
+    <section class="card-section">
+        <span class="section-badge">Sección D</span>
+        <h2>Análisis de Métricas a los 3 Meses y Decisiones Basadas en Datos</h2>
+
+        <h3>1. Evaluación del Lanzamiento: ¿Fue el Producto un Éxito?</h3>
+        <div class="callout callout-warning">
+            <strong>Dictamen del Product Owner: "Éxito Operativo Parcial con Alerta Crítica en el Embudo de Conversión."</strong><br>
+            El lanzamiento logró validar de forma contundente la adopción cívica (un <strong>55% de inicio digital</strong> partiendo de cero), redujo a la mitad el tiempo total del trámite (de <strong>6 a 3 horas</strong> promedio), elevó sustancialmente la satisfacción de los que finalizaron (de <strong>48 a 67 puntos</strong>) y descongestionó las sedes físicas (reduciendo las visitas diarias de 900 a 685).<br>
+            <strong>Sin embargo, NO es un éxito pleno:</strong> el abandono general saltó drásticamente del <strong>22% al 38%</strong> (+16 puntos porcentuales) y el costo operativo unitario se mantuvo estancado en <strong>US$ 18</strong>. Un producto que pierde a 4 de cada 10 usuarios que lo inician tiene un cuello de botella grave que debe diagnosticarse de inmediato.
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-number" style="color: var(--success-color);">55%</div>
+                <div class="kpi-label">Inicio Digital (Meta lograda vs 0% antes)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-number" style="color: var(--danger-color);">38%</div>
+                <div class="kpi-label">Tasa de Abandono (Alerta: subió desde 22%)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-number" style="color: var(--blue-civic);">3 hrs</div>
+                <div class="kpi-label">Duración Promedio (50% de reducción)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-number" style="color: var(--navy-primary);">67/100</div>
+                <div class="kpi-label">Satisfacción Ciudadana (+19 puntos)</div>
+            </div>
+        </div>
+
+        <h3>2. Métrica Principal (North Star) y 4 Métricas de Contrapeso</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Métrica</th>
+                    <th>Nombre de la Métrica</th>
+                    <th>Definición y Propósito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #F0FDF4;">
+                    <td><strong>North Star Metric (Estrella Polar)</strong></td>
+                    <td><strong>Tasa de Trámites Resueltos en Fila Express en < 15 min (TTR-15)</strong></td>
+                    <td>Porcentaje de ciudadanos que iniciaron en línea, pagaron y obtuvieron su licencia física en sede en menos de 15 minutos sin observaciones. Mide la resolución efectiva del problema, no solo inicios.</td>
+                </tr>
+                <tr>
+                    <td><strong>Contrapeso 1 (Calidad/Fricción)</strong></td>
+                    <td><strong>Tasa de Abandono por Paso del Embudo (Drop-off Rate)</strong></td>
+                    <td>Porcentaje de personas que desertan en cada pantalla (Paso 1, 2, 3 o 4) para evitar que optimizar velocidad oculte barreras insalvables.</td>
+                </tr>
+                <tr>
+                    <td><strong>Contrapeso 2 (Inclusión Social)</strong></td>
+                    <td><strong>Tasa de Derivación a Atención Asistida</strong></td>
+                    <td>Porcentaje de trámites que requirieron asistencia telefónica o presencial asistida, vigilando que la digitalización no excluya a sectores vulnerables.</td>
+                </tr>
+                <tr>
+                    <td><strong>Contrapeso 3 (Eficiencia Fiscal)</strong></td>
+                    <td><strong>Costo Operativo Real por Licencia Emitida</strong></td>
+                    <td>Costo estatal por cada plástico efectivamente entregado (debe descender de los US$18 actuales a menos de US$11 al absorber escala digital).</td>
+                </tr>
+                <tr>
+                    <td><strong>Contrapeso 4 (Precisión Legal)</strong></td>
+                    <td><strong>Tasa de Rechazo en Ventanilla por Documentación Inválida</strong></td>
+                    <td>Porcentaje de ciudadanos citados cuyos documentos físicos originales no coinciden o están vencidos, midiendo la eficacia del asistente previo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3. Tres Hipótesis del Aumento del Abandono (22% → 38%)</h3>
+        <ol style="margin-left: 20px; color: var(--text-muted); font-size: 13.5px; line-height: 1.8;">
+            <li><strong>Hipótesis A (Fricción en la Pasarela de Pago Digital):</strong> Los ciudadanos intentan pagar pero la pasarela rechaza tarjetas locales de débito o exige autenticación 3D-Secure compleja sin soporte para efectivo o billeteras, provocando la deserción en el Paso 3.</li>
+            <li><strong>Hipótesis B (Bloqueo Inesperado por Esquelas VMT):</strong> Al verificar en vivo el DUI en el Paso 2, el sistema expone multas impagas que el ciudadano desconocía o no puede saldar en ese momento, abandonando el portal sin continuar.</li>
+            <li><strong>Hipótesis C (Falta de Citas Cercanas en Sedes SERTRACEN):</strong> El ciudadano completa sus datos y pago, pero en el Paso 4 solo encuentra cupos disponibles para dentro de 3 semanas o en sucursales lejanas, decidiendo irse a hacer fila tradicional sin cita.</li>
+        </ol>
+
+        <h3>4. Datos Necesarios para Aislar la Causa Raíz</h3>
+        <p>Para determinar con certeza científica cuál de las hipótesis es la verdadera, se requiere auditar la analítica del embudo:</p>
+        <ul style="margin-left: 20px; color: var(--text-muted); font-size: 13px; line-height: 1.7;">
+            <li><strong>Métricas de Paso (Drop-off por URL):</strong> Cantidad exacta de usuarios que abandonan en `/paso1`, `/paso2`, `/paso3` y `/paso4`.</li>
+            <li><strong>Logs de Transacciones Bancarias:</strong> Tasa de intentos de pago fallidos, códigos de rechazo de la pasarela y tiempo de permanencia en el checkout.</li>
+            <li><strong>Tasa de Incidencia de Multas:</strong> Porcentaje de consultas de DUI que resultaron en estado `CON_ESQUELAS` y qué porcentaje de ellos hizo clic en el botón de pago de multa.</li>
+            <li><strong>Ocupación de Calendario:</strong> Días promedio de espera entre la fecha de solicitud y el turno disponible más próximo por sucursal.</li>
+        </ul>
+
+        <h3>5. Diseño del Experimento Controlado</h3>
+        <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px;">
+            <h4 style="color: var(--blue-civic); margin-bottom: 8px;">Experimento: "Pago Híbrido Flexible con Mandamiento NPE Inmediato"</h4>
+            <p style="font-size: 13px; margin-bottom: 8px;">
+                <strong>Supuesto a probar:</strong> El 60% del abandono se concentra en el Paso 3 debido a la desconfianza o falta de tarjeta de crédito/débito para pagar US$ 56.21 en línea.
+            </p>
+            <p style="font-size: 13px; margin-bottom: 8px;">
+                <strong>Diseño del Experimento (A/B Test de 14 días en el 50% del tráfico):</strong>
+            </p>
+            <ul style="font-size: 13px; margin-left: 18px; color: var(--text-muted); line-height: 1.6;">
+                <li><strong>Grupo Control (A):</strong> Solo opción de pago con tarjeta en línea.</li>
+                <li><strong>Grupo Variante (B):</strong> Opción dual prominente: "Pago con Tarjeta en Línea" vs. "Generar Código NPE de 30 dígitos para pagar en efectivo en cualquier banco, Punto Xpress o ventanilla SERTRACEN antes de su cita".</li>
+            </ul>
+            <p style="font-size: 13px; margin-top: 10px; color: var(--success-color);">
+                <strong>Criterio de Decisión Claro:</strong> Si la Variante B reduce el abandono en el Paso de Pago en al menos <strong>8 puntos porcentuales</strong> (bajando el abandono global por debajo del 30%) con una significancia estadística del 95% (p &lt; 0.05), el pago con NPE se desplegará de forma permanente al 100% de la ciudadanía.
+            </p>
+        </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- SECCIÓN E: PROTOTIPO DE EXPERIENCIA -->
+    <section class="card-section">
+        <span class="section-badge">Sección E</span>
+        <h2>Prototipo de Experiencia de Usuario y Arquitectura de Pantallas</h2>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+            <div>
+                <h3 style="margin: 0; color: var(--navy-primary);">Prototipo en Producción y Diseño en Stitch</h3>
+                <p style="font-size: 13px; margin: 4px 0 0 0;">Desarrollado en Laravel 11, SQLite y desplegado en Render bajo contenedor Docker.</p>
+            </div>
+            <a href="https://renovaci-n-de-licencia-de-conducir.onrender.com" target="_blank" class="btn-live">
+                🔗 Abrir Prototipo en Render
+            </a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Paso</th>
+                    <th>Pantalla y Propósito</th>
+                    <th>Ruta en Producción</th>
+                    <th>Componentes Clave y Mecanismos de Recuperación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Paso 1</strong></td>
+                    <td>
+                        <strong>Requisitos y Elegibilidad</strong><br>
+                        Presentación de aranceles unificados ($56.21), selector de las 7 clases de licencia oficial y checklist de condiciones.
+                    </td>
+                    <td><code>/</code></td>
+                    <td>
+                        • `<x-privacy-banner>` (aviso IAIP y consentimiento bajo juramento).<br>
+                        • `<x-assisted-help-button>` persistente para personas con brecha digital.<br>
+                        • Selector de 7 clases (Particular, Moto, Liviana, Pesada, etc.).
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Paso 2</strong></td>
+                    <td>
+                        <strong>Identificación y Solvencia VMT</strong><br>
+                        Captura de DUI / Carnet de Residente y verificación en vivo ante bases del VMT/SERTRACEN.
+                    </td>
+                    <td><code>/tramite/identificacion</code></td>
+                    <td>
+                        • <strong>Bloqueo recuperable por Esquela:</strong> componente `<x-alert-recovery>` con opción "Pagar Esquela Ahora (US$ 34.29)" y "Ya pagué — Revalidar".<br>
+                        • <strong>Recuperación ante caída de API:</strong> captura de error 503 sin stack trace y canalización a asistencia.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Paso 3</strong></td>
+                    <td>
+                        <strong>Confirmación de Datos y Pago</strong><br>
+                        Cotejo de datos personales, cálculo de mora extemporánea ($5.71 si ya venció) y checkout.
+                    </td>
+                    <td><code>/tramite/pago</code></td>
+                    <td>
+                        • Desglose inmutable: Trámite $52.82 + Examen $3.39 = $56.21.<br>
+                        • Pasarela digital segura y generación de mandamiento NPE de 30 dígitos.<br>
+                        • Modal accesible `<x-modal>` (prohibidas ventanas nativas `alert/confirm`).
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Paso 4</strong></td>
+                    <td>
+                        <strong>Agendamiento de Cita Examen Visual</strong><br>
+                        Selección de sede SERTRACEN, fecha, turno y promesa de Fila Express (&lt; 15 min).
+                    </td>
+                    <td><code>/tramite/cita</code></td>
+                    <td>
+                        • Selector de 5 sucursales oficiales con aforo en vivo.<br>
+                        • Slots de 15 minutos en horario oficial de atención.<br>
+                        • Checklist de documentos físicos requeridos para la visita.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Paso 5</strong></td>
+                    <td>
+                        <strong>Comprobante Oficial y Pase QR</strong><br>
+                        Código opaco `GOES-RN-XXXXXXXX`, timeline de 5 estados y código QR para tótem óptico.
+                    </td>
+                    <td><code>/tramite/comprobante</code></td>
+                    <td>
+                        • Generador dinámico de Código QR vectorial SVG accesible.<br>
+                        • Estilos optimizados `@media print` para imprimir comprobante en 1 página.<br>
+                        • Reprogramación autónoma de fecha/sucursal sin recargos.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Extra</strong></td>
+                    <td>
+                        <strong>Seguimiento Ciudadano en Línea</strong><br>
+                        Consulta del estado del trámite en cualquier momento con número de DUI o código de gestión.
+                    </td>
+                    <td><code>/seguimiento</code></td>
+                    <td>
+                        • Visualizador de progreso en 5 fases históricas.<br>
+                        • Reemisión de comprobante PDF en caso de extravío.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Garantías de Diseño, Accesibilidad y Resiliencia Implementadas</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 16px; border-radius: 8px;">
+                <h4 style="color: var(--navy-primary); font-size: 14px; margin-bottom: 6px;">Accesibilidad Universal (WCAG 2.2 AA)</h4>
+                <p style="font-size: 12.5px;">Controles nativos de tamaño de letra (A-, A, A+), modo de alto contraste para baja visión, navegación 100% por teclado, ratios de contraste superiores a 4.5:1 y textos semánticos para lectores de pantalla.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 16px; border-radius: 8px;">
+                <h4 style="color: var(--danger-color); font-size: 14px; margin-bottom: 6px;">Cero Ventanas Nativas</h4>
+                <p style="font-size: 12.5px;">Cumplimiento estricto de la regla del espacio de trabajo: <strong>prohibido el uso de <code>window.alert</code>, <code>window.confirm</code> o <code>prompt</code></strong>. Todas las confirmaciones y ayudas utilizan el componente `<x-modal>` con captura de foco y cierre por tecla Escape.</p>
+            </div>
+            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 16px; border-radius: 8px;">
+                <h4 style="color: var(--success-color); font-size: 14px; margin-bottom: 6px;">Resiliencia y Baja Conectividad</h4>
+                <p style="font-size: 12.5px;">Bundle CSS compilado localmente sin depender de CDNs externas vulnerables a fallas DNS. Servidor optimizado en HTTPS con cabeceras de seguridad y persistencia transaccional SQLite idempotente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Institucional -->
+    <footer style="text-align: center; padding: 24px 0; color: #64748B; font-size: 12px; border-top: 1px solid #E2E8F0; margin-top: 40px;">
+        <p><strong>Gobierno de El Salvador — Viceministerio de Transporte (VMT) • SERTRACEN</strong></p>
+        <p>Entregable Técnico-Funcional desarrollado bajo el marco de la Prueba Práctica Product Owner (2026).</p>
+        <p style="margin-top: 4px;">Diseño en Stitch (ID: <code>17992821048369200212</code>) • Repositorio GitHub sincronizado • Despliegue en Render verificado en vivo.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
