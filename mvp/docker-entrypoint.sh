@@ -3,7 +3,14 @@ set -e
 
 echo "==> Iniciando contenedor GOES Renovación de Licencia..."
 
-# Asegurar directorio de datos persistente para SQLite (Render Disk en /var/data)
+# Ajustar puerto de Apache si PORT está definido por Render/plataforma
+if [ -n "$PORT" ] && [ "$PORT" != "80" ]; then
+    echo "==> Configurando Apache para escuchar en puerto $PORT..."
+    sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf
+    sed -i "s/:80>/:$PORT>/g" /etc/apache2/sites-available/*.conf
+fi
+
+# Asegurar directorio de datos persistente para SQLite (Render Disk en /var/data o contenedor)
 mkdir -p /var/data
 if [ ! -f /var/data/database.sqlite ]; then
     echo "==> Creando base de datos SQLite en /var/data/database.sqlite..."
