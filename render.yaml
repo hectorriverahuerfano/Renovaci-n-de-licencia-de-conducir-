@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: goes-renovacion-licencia
+    runtime: docker
+    dockerfilePath: ./mvp/Dockerfile
+    dockerContext: ./mvp
+    plan: starter
+    healthCheckPath: /up
+    disk:
+      name: goes-sqlite-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: APP_NAME
+        value: "GOES Renovación de Licencia"
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        value: https://goes-renovacion-licencia.onrender.com
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/data/database.sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: LOG_CHANNEL
+        value: stderr
