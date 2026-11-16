@@ -11,43 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS CDN para renderizado instantáneo y responsivo -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        goes: {
-                            navy: '#0F2C59',
-                            blue: '#1D4ED8',
-                            hover: '#1E40AF',
-                            bg: '#F8FAFC',
-                            success: '#15803D',
-                            warning: '#B45309',
-                            danger: '#B91C1C',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Estilos Oficiales Compilados GOES (Sin Dependencias Externas Frágiles) -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <style>
         :root {
             --font-size-base: 1rem;
+            --goes-navy: #0F2C59;
+            --goes-blue: #1D4ED8;
+            --goes-bg: #F8FAFC;
         }
         body {
             font-size: var(--font-size-base);
             font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--goes-bg);
+            color: #0F172A;
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
         }
+        /* Resguardo Dimensional para SVGs (Evita desbordamiento 1000px si CSS externo tiene latencia) */
+        svg {
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        svg.w-7 { width: 1.75rem !important; height: 1.75rem !important; min-width: 1.75rem; }
+        svg.w-5 { width: 1.25rem !important; height: 1.25rem !important; min-width: 1.25rem; }
+        svg.w-4 { width: 1rem !important; height: 1rem !important; min-width: 1rem; }
+        svg.w-3\.5 { width: 0.875rem !important; height: 0.875rem !important; min-width: 0.875rem; }
+        svg.w-8 { width: 2rem !important; height: 2rem !important; min-width: 2rem; }
+        svg.w-9 { width: 2.25rem !important; height: 2.25rem !important; min-width: 2.25rem; }
+        svg.w-10 { width: 2.5rem !important; height: 2.5rem !important; min-width: 2.5rem; }
         /* Modo Alto Contraste */
         body.high-contrast {
             background-color: #000000 !important;
@@ -134,7 +129,7 @@
                 <a href="{{ route('inicio') }}" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1">
                     <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-white/20 group-hover:bg-white/20 transition-colors">
                         <!-- Escudo estilizado SVG -->
-                        <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg class="w-7 h-7 text-white shrink-0" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
                             <path d="M12 8v8"/>
                             <path d="M8 12h8"/>

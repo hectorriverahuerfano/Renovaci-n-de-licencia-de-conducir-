@@ -5,3 +5,5 @@
 # Carpetas de documentacion interna y ecosistema de agentes
 PRDS/
 .agents/
+.playwright-mcp/
+node_modules/
