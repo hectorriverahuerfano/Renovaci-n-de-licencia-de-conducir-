@@ -1014,6 +1014,257 @@
         </div>
     </section>
 
+    <!-- SECCIÓN F: ECOSISTEMA TECNOLÓGICO, HERRAMIENTAS Y PROGRAMACIÓN AGÉNTICA -->
+    <section class="card-section page-break">
+        <span class="section-badge">Sección F</span>
+        <h2>Ecosistema Tecnológico, Herramientas y Programación Agéntica</h2>
+        <p>
+            Para la concepción, diseño, arquitectura, aseguramiento de calidad y despliegue en producción del sistema de <strong>Renovación Digital de Licencias de Conducir de El Salvador</strong>, se articuló un ecosistema de vanguardia impulsado por <strong>Programación Agéntica Autónoma</strong>, integración continua en la nube, estándares internacionales de seguridad (OWASP) y un stack full-stack de alto rendimiento.
+        </p>
+
+        <h3>1. Paradigma de Desarrollo: Programación Agéntica Multi-Agente (Autonomous Squad)</h3>
+        <p>
+            El proyecto fue ejecutado mediante un <strong>Squad de Inteligencia Artificial Agéntica Multidisciplinar</strong> coordinado en el entorno de desarrollo <strong>Gemini / Google Antigravity</strong>. Cada agente operó bajo un rol estricto, responsabilidades segregadas (Separation of Concerns), permisos de acceso a código controlados y gobernanza de artefactos documentales en <code>PRDS/</code>:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 22%;">Agente / Rol</th>
+                    <th style="width: 20%;">Especialidad</th>
+                    <th style="width: 38%;">Responsabilidades Clave y Entregables</th>
+                    <th style="width: 20%;">Gobernanza / Permiso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Simon</strong><br><code>simon-product-owner</code></td>
+                    <td><span class="badge badge-info">Product Owner Lead</span></td>
+                    <td>Descubrimiento de producto, visión estratégica, cálculo de ROI/NPS, matriz de priorización RICE, descomposición de Épicas, Features e Historias de Usuario en formato Gherkin (BDD), PRD oficial.</td>
+                    <td><span class="badge badge-warning">Read-Only</span> (No muta código de producción)</td>
+                </tr>
+                <tr>
+                    <td><strong>Kira</strong><br><code>kira-arquitecto</code></td>
+                    <td><span class="badge badge-info">Lead Arquitecto de Software</span></td>
+                    <td>Diseño de Clean Architecture, Domain-Driven Design (DDD), patrones de resiliencia (Circuit Breaker, Idempotencia, Outbox), especificación OpenAPI 3.1 y estrategia de desacoplamiento de APIs gubernamentales.</td>
+                    <td><span class="badge badge-warning">Read-Only</span> (Diseño y revisión de deuda técnica)</td>
+                </tr>
+                <tr>
+                    <td><strong>Charlotte</strong><br><code>charlotte-disenadora</code></td>
+                    <td><span class="badge badge-info">Lead Diseñadora Digital / UX</span></td>
+                    <td>Arquitectura de información, diseño de interacción y flujos paso a paso, accesibilidad WCAG 2.2 Nivel AA, prototipado de alta fidelidad con <strong>Stitch MCP</strong>, design system institucional y cumplimiento de la regla de Cero Ventanas Nativas.</td>
+                    <td><span class="badge badge-success">Diseño & Prototipado</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Luna</strong><br><code>luna-desarrolladora</code></td>
+                    <td><span class="badge badge-info">Lead Desarrollador Web Full Stack</span></td>
+                    <td>Implementación de la aplicación en <strong>Laravel 11</strong>, Service Layer (<code>TramiteService</code>), controladores delgados, FormRequests de validación, vistas Blade institucionales y optimización de assets.</td>
+                    <td><span class="badge badge-success">Escritura de Código Web</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Salen</strong><br><code>salen-fullstack</code></td>
+                    <td><span class="badge badge-info">Full Stack Senior & Lead Móvil</span></td>
+                    <td>Arquitectura móvil nativa/híbrida (Flutter/Dart), diseño de interfaces móviles touch-first, integración de endpoints RESTful y soporte fullstack en backend.</td>
+                    <td><span class="badge badge-success">Escritura Móvil & APIs</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Coco</strong><br><code>coco-testing-appsec</code></td>
+                    <td><span class="badge badge-info">Lead QA Testing & AppSec</span></td>
+                    <td>Diseño de matriz de pruebas E2E de caja negra con <strong>Playwright</strong>, pruebas de regresión, verificación de flujos críticos, auditoría de cobertura y validación de aceptación de usuario (UAT).</td>
+                    <td><span class="badge badge-success">Auditoría & QA Automatizado</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Max</strong><br><code>max-security</code></td>
+                    <td><span class="badge badge-info">Lead Security Engineer</span></td>
+                    <td>Auditoría de ciberseguridad ofensiva/defensiva (OWASP Top 10, CWE/SANS), sanitización estricta de entradas, prevención de XSS/CSRF/SQLi, control de datos confidenciales y forzado HTTPS.</td>
+                    <td><span class="badge badge-warning">Read-Only</span> (Auditoría de seguridad)</td>
+                </tr>
+                <tr>
+                    <td><strong>Lucy</strong><br><code>lucy-code-review</code></td>
+                    <td><span class="badge badge-info">Lead Code Reviewer</span></td>
+                    <td>Quality Gate técnico, revisión de código estática, estándares PSR-12, detección de olores de código, principio de responsabilidad única (SRP) y verificación de cero ventanas nativas en código cliente.</td>
+                    <td><span class="badge badge-warning">Read-Only</span> (Dictamen de aprobación)</td>
+                </tr>
+                <tr>
+                    <td><strong>Oreo</strong><br><code>oreo-auditor-produccion</code></td>
+                    <td><span class="badge badge-info">Auditor DevOps & Pipeline</span></td>
+                    <td>Contenedorización Docker multi-etapa, script de arranque dinámico <code>docker-entrypoint.sh</code>, configuración de variables de entorno, auditoría de despliegue continuo y health checks en <strong>Render</strong>.</td>
+                    <td><span class="badge badge-success">Gobernanza de Pipeline</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-success">
+            <strong>Innovación Agéntica con Gemini / Google Antigravity:</strong> El desarrollo no se realizó mediante prompts estáticos, sino a través de un entorno agéntico con sistema de memoria persistente en disco (<code>brain/</code>), herramientas de llamada a protocolo de contexto de modelo (<strong>Model Context Protocol - MCP</strong>), ejecución reactiva de eventos y trazabilidad transparente de cada decisión de ingeniería.
+        </div>
+
+        <h3>2. Matriz Completa de Tecnologías, Herramientas y Lenguajes</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 16px 0;">
+            
+            <!-- Tarjeta 1: Lenguajes y Backend -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">🐘</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Lenguajes & Backend</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>PHP 8.2+:</strong> Tipado fuerte (<code>declare(strict_types=1)</code>), match expressions, constructores promocionados y enums tipados.</li>
+                    <li><strong>Laravel 11:</strong> Framework MVC empresarial con arquitectura desacoplada:
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li><code>TramiteController</code> (Controlador delgado REST/Web).</li>
+                            <li><code>TramiteService</code> (Capa de lógica de dominio e integración).</li>
+                            <li><code>IniciarTramiteRequest</code> y FormRequests con reglas de validación regex (formato DUI El Salvador <code>########-#</code>).</li>
+                            <li>Motor de plantillas <strong>Blade</strong> con componentes reusables (<code>x-stepper</code>, <code>x-modal</code>, <code>x-tester-sandbox</code>).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Composer 2:</strong> Gestor de dependencias backend y optimización de autoloader en producción (<code>--optimize-autoloader --no-dev</code>).</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2: Persistencia y Base de Datos -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">🗄️</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Persistencia & Base de Datos</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>SQLite 3 (Modo Transaccional WAL):</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Persistencia relacional embebida de alta velocidad sin dependencias externas complejas.</li>
+                            <li>Modo <strong>Write-Ahead Logging (WAL)</strong> para transaccionalidad segura y soporte concurrente.</li>
+                            <li>Tablas normalizadas con integridad referencial: <code>ciudadanos</code>, <code>licencias</code>, <code>esquelas</code>, <code>tramites</code>, <code>pagos</code> y <code>citas</code>.</li>
+                            <li>Migraciones automáticas de base de datos y <strong>DatabaseSeeder</strong> idempotente precargado con casos reales de El Salvador (ciudadanos solventes, con esquelas, casos borde y extranjeros diplomáticos).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 3: Frontend, Estilos & Accesibilidad -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">🎨</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Frontend, Estilos & Prototipado</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>Tailwind CSS v4 & Vite:</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Compilación local autónoma en bundle estático (<code>public/css/app.css</code> de 66.1 KB), eliminando vulnerabilidad ante fallos DNS de CDNs externas.</li>
+                            <li>Paleta institucional GOES: Azul Marino <code>#0F2C59</code>, Azul Cívico <code>#1D4ED8</code> y fondo neutro accesible <code>#F8FAFC</code>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Stitch MCP (Google Cloud):</strong> Plataforma de diseño generativo donde se creó el proyecto oficial <code>projects/17992821048369200212</code> con las 5 pantallas del flujo institucional.</li>
+                    <li><strong>Accesibilidad WCAG 2.2 Nivel AA:</strong> Controles dinámicos de tamaño de fuente (A-/A/A+), modo de alto contraste para baja visión, navegación 100% por teclado y cero dependencias de ventanas nativas (<code>alert/confirm</code>).</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 4: Gestión de Proyecto y Repositorio -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">📊</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Gestión de Proyecto & Repositorio</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>Azure DevOps Boards:</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Gestión ágil completa del ciclo de vida del producto (ALM).</li>
+                            <li><strong>66 Work Items</strong> administrados y cerrados con resolución <code>Fixed and verified</code>: 3 Epics, 9 Features, 18 User Stories (con Gherkin), 33 Tasks técnicas y 3 Bugs mayores.</li>
+                            <li>Automatización e integración continua mediante <strong>REST API v7.1</strong> de Azure DevOps.</li>
+                        </ul>
+                    </li>
+                    <li><strong>GitHub:</strong> Control de versiones distribuido (Git), branching model, commits semánticos y sincronización de código fuente en repositorio público.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 5: Cloud, DevOps & Contenedores -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">☁️</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Cloud, DevOps & Contenedores</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>Render Cloud Services:</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Despliegue continuo con runtime nativo <strong>Docker</strong>.</li>
+                            <li>Terminación TLS/HTTPS automática con certificados gestionados.</li>
+                            <li>Monitoreo y sonda de salud nativa (Health Check endpoint <code>/up</code> con respuesta HTTP 200).</li>
+                            <li>Inyección segura de 10 variables de entorno de producción.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Docker & Apache:</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Imagen base optimizada <code>php:8.2-apache</code>.</li>
+                            <li>Script <code>docker-entrypoint.sh</code> con vinculación dinámica del puerto <code>$PORT</code> inyectado en ejecución por Render.</li>
+                            <li>Módulos <code>mod_rewrite</code> y <code>mod_headers</code> habilitados para enrutamiento limpio y seguridad HTTP.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 6: Testing, QA & Seguridad -->
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                    <span style="font-size: 20px;">🛡️</span>
+                    <h4 style="margin: 0; color: var(--navy-primary); font-size: 15px;">Testing, QA & Seguridad</h4>
+                </div>
+                <ul style="padding-left: 18px; font-size: 12.5px; color: var(--text-muted); line-height: 1.7;">
+                    <li><strong>Playwright MCP:</strong> Automatización de pruebas E2E de caja negra, navegación de flujos completos, verificación de renderizado en vivo y monitoreo de errores de consola de navegador.</li>
+                    <li><strong>PHPUnit / Pest:</strong> 20 pruebas automatizadas con 99 aserciones unitarias e integrales que validan cálculo de mora, unicidad de citas y reglas de negocio.</li>
+                    <li><strong>Ciberseguridad OWASP Top 10:</strong>
+                        <ul style="padding-left: 14px; margin-top: 4px;">
+                            <li>Protección CSRF activa en todos los formularios.</li>
+                            <li>Forzado de esquema HTTPS integral (<code>URL::forceScheme('https')</code>) para prevenir alertas de contenido mixto.</li>
+                            <li>Cabeceras de protección: <code>X-Content-Type-Options: nosniff</code>, <code>X-Frame-Options: SAMEORIGIN</code> y <code>X-XSS-Protection: 1; mode=block</code>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <h3>3. Síntesis de URLs y Recursos de Auditoría Técnica</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Recurso / Entorno</th>
+                    <th style="width: 45%;">Dirección / Identificador</th>
+                    <th style="width: 30%;">Estado / Verificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Aplicación en Producción</strong></td>
+                    <td><a href="https://renovaci-n-de-licencia-de-conducir.onrender.com" target="_blank" style="color: var(--blue-civic); font-weight: 600;">https://renovaci-n-de-licencia-de-conducir.onrender.com</a></td>
+                    <td><span class="badge badge-success">Live (HTTP 200 OK)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Entregable Product Owner Web</strong></td>
+                    <td><a href="https://renovaci-n-de-licencia-de-conducir.onrender.com/entregable-po.html" target="_blank" style="color: var(--blue-civic); font-weight: 600;">https://renovaci-n-de-licencia-de-conducir.onrender.com/entregable-po.html</a></td>
+                    <td><span class="badge badge-success">Online (Versión Web)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Health Check Endpoint</strong></td>
+                    <td><a href="https://renovaci-n-de-licencia-de-conducir.onrender.com/up" target="_blank" style="color: var(--blue-civic); font-weight: 600;">https://renovaci-n-de-licencia-de-conducir.onrender.com/up</a></td>
+                    <td><span class="badge badge-success">Healthy (Monitoreado)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Repositorio de Código Fuente</strong></td>
+                    <td><a href="https://github.com/hectorriverahuerfano/Renovaci-n-de-licencia-de-conducir-" target="_blank" style="color: var(--blue-civic); font-weight: 600;">github.com/hectorriverahuerfano/Renovaci-n-de-licencia-de-conducir-</a></td>
+                    <td><span class="badge badge-info">Sincronizado (Rama main)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Proyecto Azure DevOps Boards</strong></td>
+                    <td><code>licencia de conducir en El Salvador</code> (Org: <code>AppProyectDevep</code>)</td>
+                    <td><span class="badge badge-success">66 / 66 Items Cerrados (100%)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Proyecto de Diseño Stitch</strong></td>
+                    <td><code>projects/17992821048369200212</code></td>
+                    <td><span class="badge badge-info">5 Pantallas Institucionales</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
     <!-- Footer Institucional -->
     <footer style="text-align: center; padding: 24px 0; color: #64748B; font-size: 12px; border-top: 1px solid #E2E8F0; margin-top: 40px;">
         <p><strong>Gobierno de El Salvador — Viceministerio de Transporte (VMT) • SERTRACEN</strong></p>
